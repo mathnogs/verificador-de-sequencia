@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main(void) {
+  int n, anterior;
+  int menor = 0, maior = 0;
+
+  for(int i = 10; i; --i){
+    scanf("%d", &n);
+    if(i == 10){
+      anterior = n;
+    }
+    else if(n < anterior){
+      menor = 1;
+    }
+    else if (n > anterior){
+      maior = 1;
+      anterior = n;
+    }
+  }
+  if(menor && ! maior){
+    printf("Decrescnte");
+  }
+  else if( && ! menor){
+    printf("Crescente");
+  }
+  else{
+    printf("Não possuem uma ordem");
+  }
+  return 0;
+}
